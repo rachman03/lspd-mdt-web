@@ -1,0 +1,6 @@
+{
+  "name": "LSPD MDT Web",
+  "description": "Sistem Mobile Data Terminal (MDT) berbasis web untuk LSPD GTA 5 roleplay, dilengkapi pencatatan laporan kriminal secara real-time, manajemen tahanan, dan data kepolisian.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

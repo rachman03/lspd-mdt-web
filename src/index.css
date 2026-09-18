@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;750&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom scrollbars for a clean dark-mode terminal look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617; /* Slate-950 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b; /* Slate-800 */
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155; /* Slate-700 */
+}
+
+/* Print CSS Styles to cleanly print only designated areas */
+@media print {
+  /* Hide the React Root container completely */
+  #root {
+    display: none !important;
+  }
+  
+  /* Make sure the body has a clean white background with black text */
+  body {
+    background: white !important;
+    color: black !important;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  
+  /* Show only the portal-rendered printable area */
+  .printable-area {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    background: white !important;
+    color: black !important;
+    padding: 20px !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    position: static !important;
+    overflow: visible !important;
+  }
+
+  /* Keep table lines dark and solid for physical print */
+  .printable-area table,
+  .printable-area th,
+  .printable-area td {
+    border-color: #000000 !important;
+  }
+
+  /* Prevent page breaks inside signature blocks */
+  .avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
